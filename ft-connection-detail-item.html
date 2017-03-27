@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../iron-label/iron-label.html">
+
+
+<dom-module id="ft-connection-detail-item">
+
+    <style include="iron-flex iron-flex-alignment"></style>
+
+    <template>
+
+        <div class="layout horizontal center">
+
+            <!-- Label -->
+            <iron-label style$="width:{{nameWidth}}px; font-family:Arial; text-align:right;">
+                [[name]]
+            </iron-label>
+
+            <!-- Spacer -->
+            <div style="width:20px;"></div>
+
+            <!-- Value -->
+            <iron-label id="value" style="font-family:Arial;">
+                [[value]]
+            </iron-label>
+        </div>
+
+    </template>
+
+    <script>
+        Polymer
+        ({
+            is: 'ft-connection-detail-item',
+
+            properties:
+            {
+                name:
+                {
+                    type: String,
+                    value: ""
+                },
+                value:
+                {
+                    type: String,
+                    value: ""
+                },
+                nameWidth:
+                {
+                    type: String,
+                    value: "100"
+                }
+            }
+        });
+    </script>
+
+</dom-module>

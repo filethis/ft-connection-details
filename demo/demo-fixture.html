@@ -18,7 +18,9 @@ An element that shows properties of a given FileThis connection resource
 
     <template>
 
-        <ft-connection-details></ft-connection-details>
+        <div class="layout vertical center" style="height:293px">
+            <ft-connection-details id="details" style="width:400px;border:1px solid #DDD;"></ft-connection-details>
+        </div>
 
     </template>
 
@@ -30,6 +32,51 @@ An element that shows properties of a given FileThis connection resource
 
             properties:
             {
+            },
+
+            ready: function()
+            {
+                this._loadFakeSources();
+            },
+
+            _loadFakeSources: function()
+            {
+                var path = "fake-sources.json";
+
+                var xmlHttpRequest = new XMLHttpRequest();
+                xmlHttpRequest.overrideMimeType("application/json");
+                xmlHttpRequest.open('GET', path, true);
+                xmlHttpRequest.onreadystatechange = function()
+                {
+                    if (xmlHttpRequest.readyState == 4 &&
+                        xmlHttpRequest.status == "200")
+                    {
+                        var sources = JSON.parse(xmlHttpRequest.responseText);
+                        details.sources = sources;
+
+                        this._loadFakeConnection()
+                    }
+                }.bind(this);
+                xmlHttpRequest.send();
+            },
+
+            _loadFakeConnection: function()
+            {
+                var path = "fake-connection.json";
+
+                var xmlHttpRequest = new XMLHttpRequest();
+                xmlHttpRequest.overrideMimeType("application/json");
+                xmlHttpRequest.open('GET', path, true);
+                xmlHttpRequest.onreadystatechange = function()
+                {
+                    if (xmlHttpRequest.readyState == 4 &&
+                        xmlHttpRequest.status == "200")
+                    {
+                        var connection = JSON.parse(xmlHttpRequest.responseText);
+                        details.connection = connection;
+                    }
+                }.bind(this);
+                xmlHttpRequest.send();
             }
 
         });
