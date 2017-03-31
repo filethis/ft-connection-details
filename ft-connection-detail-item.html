@@ -4,6 +4,13 @@
 <link rel="import" href="../iron-label/iron-label.html">
 
 
+<!--
+`ft-connection-detail-item`
+An element that displays a single labeled connection property. Used by the ft-connection-details element.
+
+@demo demo/index.html
+-->
+
 <dom-module id="ft-connection-detail-item">
 
     <style include="iron-flex iron-flex-alignment"></style>
@@ -35,16 +42,21 @@
 
             properties:
             {
+                /** The name of the property to be used as a right-justified label. */
                 name:
                 {
                     type: String,
                     value: ""
                 },
+
+                /** The value of the property displayed to the right of the label. */
                 value:
                 {
                     type: String,
                     value: ""
                 },
+
+                /** The width in pixels of the label. This will usually have the same value as other items in a list, so that the right-aligned labels line up vertically. */
                 nameWidth:
                 {
                     type: String,

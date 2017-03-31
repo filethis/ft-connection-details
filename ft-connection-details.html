@@ -5,7 +5,9 @@
 
 <!--
 `ft-connection-details`
-An element that shows properties of a given FileThis connection resource
+An element that displays a number of details about a FileThis connection.
+
+It would typically be used alongside a list of connections, showing details for the currently-selected one.
 
 @demo demo/index.html
 -->
@@ -56,6 +58,8 @@ An element that shows properties of a given FileThis connection resource
             is: 'ft-connection-details',
 
             properties: {
+
+                /** The connection resource whose properties are displayed. */
                 connection:
                 {
                     type: Object,
@@ -63,12 +67,16 @@ An element that shows properties of a given FileThis connection resource
                     notify: true,
                     observer: "_onConnectionChanged"
                 },
+
+                /** The list of all sources. This is used to look up certain properties of the given connection's source for display. */
                 sources:
                 {
                     type: Array,
                     notify: true,
                     value: []
                 },
+
+                /** This is the source resource corresponding to the given connection's "sourceId" property. */
                 _source:
                 {
                     type: Object,
