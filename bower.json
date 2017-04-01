@@ -1,6 +1,6 @@
 {
   "name": "ft-connection-details",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An element that shows properties of a given FileThis connection resource",
   "main": "ft-connection-details.html",
   "dependencies": {
