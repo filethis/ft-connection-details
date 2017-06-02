@@ -65,8 +65,8 @@ An element that shows properties of a given FileThis connection resource
                 xmlHttpRequest.open('GET', path, true);
                 xmlHttpRequest.onreadystatechange = function()
                 {
-                    if (xmlHttpRequest.readyState == 4 &&
-                        xmlHttpRequest.status == "200")
+                    if (xmlHttpRequest.readyState === 4 &&
+                        xmlHttpRequest.status === 200)
                     {
                         var sources = JSON.parse(xmlHttpRequest.responseText);
                         details.sources = sources;
@@ -86,8 +86,8 @@ An element that shows properties of a given FileThis connection resource
                 xmlHttpRequest.open('GET', path, true);
                 xmlHttpRequest.onreadystatechange = function()
                 {
-                    if (xmlHttpRequest.readyState == 4 &&
-                        xmlHttpRequest.status == "200")
+                    if (xmlHttpRequest.readyState === 4 &&
+                        xmlHttpRequest.status === 200)
                     {
                         var connection = JSON.parse(xmlHttpRequest.responseText);
                         details.connection = connection;
