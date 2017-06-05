@@ -45,15 +45,15 @@ It would typically be used alongside a list of connections, showing details for 
                 <div style="height:30px;"></div>
 
                 <!-- Category -->
-                <ft-connection-detail-item name="Category" value="[[_typeDisplayName(_source.type)]]" name-width="100"></ft-connection-detail-item>
+                <ft-connection-detail-item name="Category" value="[[_typeDisplayName(sources.type)]]" name-width="100"></ft-connection-detail-item>
                 <div style="height:30px;"></div>
 
                 <!-- Website -->
-                <ft-connection-detail-item name="Website" value="[[_source.homePageUrl]]" name-width="100"></ft-connection-detail-item>
+                <ft-connection-detail-item name="Website" value="[[sources.homePageUrl]]" name-width="100"></ft-connection-detail-item>
                 <div style="height:30px;"></div>
 
                 <!-- Phone Number -->
-                <ft-connection-detail-item name="Phone Number" value="[[_source.phone]]" name-width="100"></ft-connection-detail-item>
+                <ft-connection-detail-item name="Phone Number" value="[[sources.phone]]" name-width="100"></ft-connection-detail-item>
                 <div style="height:30px;"></div>
 
                 <!-- Last Refresh -->
@@ -94,7 +94,7 @@ It would typically be used alongside a list of connections, showing details for 
                 },
 
                 /** This is the source resource corresponding to the given connection's "sourceId" property. */
-                _source:
+                sources:
                 {
                     type: Object,
                     notify: true,
@@ -102,9 +102,9 @@ It would typically be used alongside a list of connections, showing details for 
                 }
             },
             
-            _onConnectionChanged: function()
+            _onConnectionChanged: function(to, from)
             {
-                this._source = this._findSource(this.connection);
+                this.sources = this._findSource(this.connection);
             },
 
             _findSource: function(connection)
