@@ -3,13 +3,16 @@
   "description": "An element that shows properties of a given FileThis connection resource",
   "main": "ft-connection-details.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.9.0",
-    "iron-label": "PolymerElements/iron-label#^1.0.2"
+    "polymer": "Polymer/polymer#^1.9.1",
+    "iron-label": "PolymerElements/iron-label#^2.0.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^2.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
     "web-component-tester": "^4.0.0",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.24"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.1"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^1.0.1"
   }
 }
