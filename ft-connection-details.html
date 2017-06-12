@@ -31,7 +31,7 @@ It would typically be used alongside a list of connections, showing details for 
 
 <dom-module id="ft-connection-details">
 
-    <style include="iron-flex iron-flex-alignment"></style>
+    <style include="iron-flex iron-flex-alignment iron-positioning"></style>
 
     <template>
 
@@ -94,22 +94,22 @@ It would typically be used alongside a list of connections, showing details for 
                 },
 
                 /** This is the source resource corresponding to the given connection's "sourceId" property. */
-                sources:
+                source:
                 {
                     type: Object,
                     notify: true,
                     value: null
                 }
             },
-            
+
             _onConnectionChanged: function(to, from)
             {
-                this.sources = this._findSource(this.connection);
+                this.source = this._findSource(this.connection);
             },
 
             _findSource: function(connection)
             {
-                if (connection == null)
+                if (connection === null)
                     return null;
                 var sourceId = connection.sourceId;
                 var count = this.sources.length;
