@@ -3,7 +3,7 @@
   "description": "An element that shows properties of a given FileThis connection resource",
   "main": "ft-connection-details.html",
   "dependencies": {
-    "ft-element-demo": "filethis/ft-element-demo#^0.0.5",
+    "ft-element-demo": "filethis/ft-element-demo#^0.0.8",
     "iron-label": "PolymerElements/iron-label#1 - 2",
     "polymer": "Polymer/polymer#1.9 - 2"
   },
