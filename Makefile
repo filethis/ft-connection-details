@@ -1,6 +1,6 @@
 # Project configuration
 NAME=ft-connection-details
-VERSION=0.0.23
+VERSION=0.0.24
 LOCAL_PORT=3636
 GITHUB_USER=filethis
 GITHUB_USER_ABBREV=ft
