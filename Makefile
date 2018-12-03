@@ -1,7 +1,7 @@
 # Project configuration
 NAME=ft-connection-details
 SRC_DIR=
-VERSION=1.0.28
+VERSION=1.0.29
 LOCAL_PORT=3636
 GITHUB_USER=filethis
 GITHUB_USER_ABBREV=ft
