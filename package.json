@@ -1,7 +1,7 @@
 {
   "description": "An element that shows properties of a given FileThis connection resource",
-  "name": "filethis/ft-connection-details",
-  "version": "filethis/1.0.29",
+  "name": "ft-connection-details",
+  "version": "1.0.29",
   "resolutions": {
     "inherits": "2.0.3",
     "samsam": "1.1.3",
