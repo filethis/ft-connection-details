@@ -14,56 +14,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-        <title>ft-connection-details</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0;url=demo/" />
+    <title>ft-connection-details</title>
+</head>
 
-        <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-
-        <link rel="import" href="../../polymer/polymer.html">
-        <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-        <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-        <link rel="import" href="demo-fixture.html">
-
-        <!-- FIXME(polymer-modulizer):
-        These imperative modules that innerHTML your HTML are
-        a hacky way to be sure that any mixins in included style
-        modules are ready before any elements that reference them are
-        instantiated, otherwise the CSS @apply mixin polyfill won't be
-        able to expand the underlying CSS custom properties.
-        See: https://github.com/Polymer/polymer-modulizer/issues/154
-        -->
-    <script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<style is="custom-style" include="demo-pages-shared-styles">
-            body {
-                background-color: #FAFAFA;
-            }
-            html, body {
-                height: 100%;
-                margin:0;
-            }
-        </style>`;
-
-document.head.appendChild($_documentContainer.content);
-</script>
-    </head>
-
-    <body>
-        <script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<demo-fixture style="height:100%; ">
-        </demo-fixture>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
-    </body>
+<body>
+    <!--
+        Visit demo/index.html to see live examples of your element running.
+        This page will automatically redirect you there when run in the browser
+        with `polymer serve`.
+      -->
+</body>
 
 </html>
